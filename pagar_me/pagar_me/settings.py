@@ -12,24 +12,32 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'django_extensions',
-    'users',
-    'products',
-    'orders',
-    'transactions',
-    'paymentInfos',
-    'payables',
-    'fees',
+DJANGO_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
 ]
+
+MY_APPS = [
+    "fees",
+    "payables",
+    "payment_info",
+    "users",
+    "products",
+    "orders",
+    "transactions",
+]
+
+THIRD_PARTY_APP = [
+    "rest_framework",
+    "rest_framework.authtoken",
+    'django_extensions',
+]
+
+INSTALLED_APPS = DJANGO_APPS + MY_APPS + THIRD_PARTY_APP
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
