@@ -1,7 +1,7 @@
 from uuid import uuid4
 from django.db import models
 
-class PaymentInfos(models.Model):
+class PaymentInfo(models.Model):
   id = models.UUIDField(primary_key = True, default = uuid4, editable = False)
   payment_method = models.CharField(max_length = 50)
   card_number = models.CharField(max_length = 20)
