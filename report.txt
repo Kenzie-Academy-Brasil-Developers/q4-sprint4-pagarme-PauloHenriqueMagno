@@ -1,0 +1,601 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Found 71 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: django_extensions, messages, rest_framework, staticfiles
+  Apply all migrations: admin, auth, authtoken, contenttypes, fees, orders, payables, payment_info, products, sessions, transactions, users
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying users.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+  Applying authtoken.0003_tokenproxy... OK
+  Applying fees.0001_initial... OK
+  Applying payment_info.0001_initial... OK
+  Applying transactions.0001_initial... OK
+  Applying products.0001_initial... OK
+  Applying orders.0001_initial... OK
+  Applying orders.0002_initial... OK
+  Applying orders.0003_initial... OK
+  Applying payables.0001_initial... OK
+  Applying payables.0002_initial... OK
+  Applying payment_info.0002_initial... OK
+  Applying products.0002_initial... OK
+  Applying sessions.0001_initial... OK
+  Applying transactions.0002_initial... OK
+System check identified no issues (0 silenced).
+test_admin_list_users_success_200 (tests_api.TestAccounst) ... ERROR
+test_anonymous_list_users_fail_401 (tests_api.TestAccounst) ... ERROR
+test_buyer_list_users_fail_403 (tests_api.TestAccounst) ... ERROR
+test_create_account_admin_success_201 (tests_api.TestAccounst) ... ERROR
+test_create_account_buyer_success_201 (tests_api.TestAccounst) ... ERROR
+test_create_account_duplicated_email_fail_400 (tests_api.TestAccounst) ... ERROR
+test_create_account_seller_success_201 (tests_api.TestAccounst) ... ERROR
+test_create_account_wrong_fields_fail_400 (tests_api.TestAccounst) ... ERROR
+test_login_fail_401 (tests_api.TestAccounst) ... FAIL
+test_login_failure_wrong_fields_400 (tests_api.TestAccounst) ... ERROR
+test_login_success_200 (tests_api.TestAccounst) ... ERROR
+test_seller_list_users_fail_403 (tests_api.TestAccounst) ... ERROR
+test_admin_create_fee_success_201 (tests_api.TestFee) ... ERROR
+test_admin_create_fee_with_wrong_fields_fail_400 (tests_api.TestFee) ... ERROR
+test_admin_list_fee_success_200 (tests_api.TestFee) ... ERROR
+test_admin_retrieve_fee_success_200 (tests_api.TestFee) ... ERROR
+test_anonymous_create_fee_fail_401 (tests_api.TestFee) ... ERROR
+test_anonymous_list_fee_fail_401 (tests_api.TestFee) ... ERROR
+test_anonymous_retrieve_fee_fail_401 (tests_api.TestFee) ... ERROR
+test_buyer_create_fee_fail_403 (tests_api.TestFee) ... ERROR
+test_buyer_list_fee_fail_403 (tests_api.TestFee) ... ERROR
+test_buyer_retrieve_fee_fail_403 (tests_api.TestFee) ... ERROR
+test_seller_create_fee_fail_403 (tests_api.TestFee) ... ERROR
+test_seller_list_fee_fail_403 (tests_api.TestFee) ... ERROR
+test_seller_retrieve_fee_fail_403 (tests_api.TestFee) ... ERROR
+test_admin_create_payment_info_fail_403 (tests_api.TestPaymentInfo) ... ERROR
+test_admin_list_payment_info_fail_403 (tests_api.TestPaymentInfo) ... ERROR
+test_anonymous_create_payment_info_fail_401 (tests_api.TestPaymentInfo) ... ERROR
+test_anonymous_list_payment_info_fail_401 (tests_api.TestPaymentInfo) ... ERROR
+test_buyer_create_payment_info_already_exists_fail_422 (tests_api.TestPaymentInfo) ... ERROR
+test_buyer_create_payment_info_success_200 (tests_api.TestPaymentInfo) ... ERROR
+test_buyer_create_payment_info_with_wrong_fields_fail_400 (tests_api.TestPaymentInfo) ... ERROR
+test_buyer_list_payment_info_success_200 (tests_api.TestPaymentInfo) ... ERROR
+test_seller_create_payment_info_fail_403 (tests_api.TestPaymentInfo) ... ERROR
+test_seller_list_payment_info_fail_403 (tests_api.TestPaymentInfo) ... ERROR
+test_admin_create_product_fail_403 (tests_api.TestProducts) ... ERROR
+test_admin_update_product_fail_403 (tests_api.TestProducts) ... ERROR
+test_anonymous_create_product_fail_401 (tests_api.TestProducts) ... ERROR
+test_anonymous_update_product_fail_401 (tests_api.TestProducts) ... ERROR
+test_buyer_create_product_fail_403 (tests_api.TestProducts) ... ERROR
+test_buyer_update_product_fail_403 (tests_api.TestProducts) ... ERROR
+test_list_products_200 (tests_api.TestProducts) ... ERROR
+test_list_products_by_seller_200 (tests_api.TestProducts) ... ERROR
+test_list_products_by_seller_with_wrong_seller_id_404 (tests_api.TestProducts) ... ERROR
+test_retrieve_products_fail_wrong_id_404 (tests_api.TestProducts) ... ok
+test_retrieve_products_success_200 (tests_api.TestProducts) ... ERROR
+test_seller_create_product_success_201 (tests_api.TestProducts) ... ERROR
+test_seller_create_product_with_wrong_fields_fail_400 (tests_api.TestProducts) ... ERROR
+test_seller_update_product_success_200 (tests_api.TestProducts) ... ERROR
+test_seller_update_product_with_wrong_product_id_404 (tests_api.TestProducts) ... ERROR
+ERROR
+
+======================================================================
+ERROR: test_admin_list_users_success_200 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 197, in test_admin_list_users_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_list_users_fail_401 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 244, in test_anonymous_list_users_fail_401
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_list_users_fail_403 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 228, in test_buyer_list_users_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_create_account_admin_success_201 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 79, in test_create_account_admin_success_201
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_create_account_buyer_success_201 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 117, in test_create_account_buyer_success_201
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_create_account_duplicated_email_fail_400 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 138, in test_create_account_duplicated_email_fail_400
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_create_account_seller_success_201 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 98, in test_create_account_seller_success_201
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_create_account_wrong_fields_fail_400 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 147, in test_create_account_wrong_fields_fail_400
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_login_failure_wrong_fields_400 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 189, in test_login_failure_wrong_fields_400
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_login_success_200 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 160, in test_login_success_200
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_list_users_fail_403 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 212, in test_seller_list_users_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_create_fee_success_201 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 321, in test_admin_create_fee_success_201
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_create_fee_with_wrong_fields_fail_400 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 340, in test_admin_create_fee_with_wrong_fields_fail_400
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_list_fee_success_200 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 394, in test_admin_list_fee_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_retrieve_fee_success_200 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 445, in test_admin_retrieve_fee_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_create_fee_fail_401 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 386, in test_anonymous_create_fee_fail_401
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_list_fee_fail_401 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 437, in test_anonymous_list_fee_fail_401
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_retrieve_fee_fail_401 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 516, in test_anonymous_retrieve_fee_fail_401
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_create_fee_fail_403 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 371, in test_buyer_create_fee_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_list_fee_fail_403 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 422, in test_buyer_list_fee_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_retrieve_fee_fail_403 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 491, in test_buyer_retrieve_fee_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_create_fee_fail_403 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 357, in test_seller_create_fee_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_list_fee_fail_403 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 408, in test_seller_list_fee_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_retrieve_fee_fail_403 (tests_api.TestFee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 466, in test_seller_retrieve_fee_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_create_payment_info_fail_403 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1077, in test_admin_create_payment_info_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_list_payment_info_fail_403 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1141, in test_admin_list_payment_info_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_create_payment_info_fail_401 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1094, in test_anonymous_create_payment_info_fail_401
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_list_payment_info_fail_401 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1156, in test_anonymous_list_payment_info_fail_401
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_create_payment_info_already_exists_fail_422 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1028, in test_buyer_create_payment_info_already_exists_fail_422
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_create_payment_info_success_200 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1005, in test_buyer_create_payment_info_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_create_payment_info_with_wrong_fields_fail_400 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1047, in test_buyer_create_payment_info_with_wrong_fields_fail_400
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_list_payment_info_success_200 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1102, in test_buyer_list_payment_info_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_create_payment_info_fail_403 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1062, in test_seller_create_payment_info_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_list_payment_info_fail_403 (tests_api.TestPaymentInfo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1127, in test_seller_list_payment_info_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_create_product_fail_403 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 647, in test_admin_create_product_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_admin_update_product_fail_403 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 850, in test_admin_update_product_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_create_product_fail_401 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 679, in test_anonymous_create_product_fail_401
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_anonymous_update_product_fail_401 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 908, in test_anonymous_update_product_fail_401
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_create_product_fail_403 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 662, in test_buyer_create_product_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_buyer_update_product_fail_403 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 879, in test_buyer_update_product_fail_403
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_list_products_200 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 688, in test_list_products_200
+    output = response.json()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_list_products_by_seller_200 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 744, in test_list_products_by_seller_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_list_products_by_seller_with_wrong_seller_id_404 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 792, in test_list_products_by_seller_with_wrong_seller_id_404
+    self.assertDictEqual(response.json(), {"detail": "Not found."})
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_retrieve_products_success_200 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 715, in test_retrieve_products_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_create_product_success_201 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 611, in test_seller_create_product_success_201
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_create_product_with_wrong_fields_fail_400 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 633, in test_seller_create_product_with_wrong_fields_fail_400
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_update_product_success_200 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 796, in test_seller_update_product_success_200
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: test_seller_update_product_with_wrong_product_id_404 (tests_api.TestProducts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 832, in test_seller_update_product_with_wrong_product_id_404
+    token = self.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+ERROR: setUpClass (tests_api.TestTransactionsAndPayables)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/testcases.py", line 1414, in setUpClass
+    cls.setUpTestData()
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 1196, in setUpTestData
+    cls.seller_id = cls.client.post(
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/venv/lib/python3.9/site-packages/django/test/client.py", line 748, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html", not "application/json"
+
+======================================================================
+FAIL: test_login_fail_401 (tests_api.TestAccounst)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/paulo/apps/Git_repositories/Kenzie/Q4/Sprint 4/q4-sprint4-pagarme-PauloHenriqueMagno/pagar_me/tests_api.py", line 172, in test_login_fail_401
+    self.assertEqual(response.status_code, 401)
+AssertionError: 404 != 401
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.081s
+
+FAILED (failures=1, errors=49)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
