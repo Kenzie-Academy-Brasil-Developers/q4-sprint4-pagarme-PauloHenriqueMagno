@@ -46,6 +46,10 @@ class UserView(APIView):
         except IntegrityError as error:
             return Response(str(error), 400)
 
+    def get(self, request: Request):
+        serializedUsers = UserSerializer(Users.objects.all(), many = True)
+        return Response(serializedUsers.data, 200)
+
 @api_view(['POST'])
 def loginView(request: Request):
     serializer = LoginUserSerializer(data = request.data)
