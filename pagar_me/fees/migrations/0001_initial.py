@@ -3,14 +3,13 @@ from datetime import datetime
 from django.db import migrations, models
 from django.db.migrations.state import StateApps
 from django.db.backends.sqlite3.schema import DatabaseSchemaEditor
-from uuid import uuid4
-
+import uuid
 
 def insert_initial_fees(apps: StateApps, schema_editor: DatabaseSchemaEditor):
     fees = apps.get_model('fees', 'Fees')
 
     fee = {
-        'id': uuid4(),
+        'id': uuid.uuid4(),
         'credit_fee': '0.05',
         'debit_fee': '0.03',
         'created_at': datetime.now(),
@@ -29,7 +28,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Fees',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('id', models.  UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
                 ('credit_fee', models.FloatField()),
                 ('debit_fee', models.FloatField()),
                 ('created_at', models.DateTimeField()),
