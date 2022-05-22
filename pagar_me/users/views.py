@@ -12,7 +12,7 @@ from rest_framework.views import APIView
 from users.permissions import UserPermissions
 from users.models import Users
 
-from users.serializers import UserSerializer
+from users.serializers import UserSerializer, LoginUserSerializer
 
 class UserView(APIView):
     authentication_classes = [TokenAuthentication]
@@ -46,3 +46,19 @@ class UserView(APIView):
         except IntegrityError as error:
             return Response(str(error), 400)
 
+@api_view(['POST'])
+def loginView(request: Request):
+    serializer = LoginUserSerializer(data = request.data)
+    serializer.is_valid(raise_exception = True)
+
+    user = authenticate(
+        username = serializer.validated_data["email"],
+        password = serializer.validated_data["password"],
+    )
+
+    if not user:
+        return Response({"message": "Invalid credentials"}, 401)
+
+    token, _ = Token.objects.get_or_create(user = user)
+
+    return Response({"token": token.key})
