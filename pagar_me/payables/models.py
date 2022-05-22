@@ -1,7 +1,7 @@
 from uuid import uuid4
 from django.db import models
 
-class Payables(models.Model):
+class Payable(models.Model):
   id = models.UUIDField(primary_key = True, default = uuid4, editable = False)
   status = models.CharField(max_length = 50)
   payment_date = models.DateField()
