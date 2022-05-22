@@ -6,5 +6,5 @@ class Transactions(models.Model):
   amount = models.FloatField()
   created_at = models.DateField()
   
-  payment_info = models.ForeignKey('paymentInfos.PaymentInfos', on_delete = models.CASCADE)
+  payment_info = models.ForeignKey('payment_info.PaymentInfo', on_delete = models.CASCADE)
   seller = models.ForeignKey('users.Users', on_delete = models.CASCADE)
