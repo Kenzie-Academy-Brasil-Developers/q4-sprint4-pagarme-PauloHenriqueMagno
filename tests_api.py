@@ -1000,7 +1000,7 @@ class TestPaymentInfo(APITestCase):
             "card_expiring_date": "2022-04-01",
         }
 
-    def test_buyer_create_payment_info_success_200(self):
+    def test_buyer_create_payment_info_success_201(self):
         # Login with buyer user
         token = self.client.post(
             "/api/login/", self.buyer_login_data, format="json"
