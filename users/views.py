@@ -28,7 +28,7 @@ class UserView(APIView):
             ).exists()
 
             if isEmailTaken:
-                return Response({"message": "User already exists"}, 422)
+                return Response({"email": ["user with this email already exists."]}, 400)
 
             newUser = Users.objects.create(**serializer.validated_data)
 
