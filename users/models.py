@@ -8,6 +8,8 @@ class Users(AbstractUser):
   first_name = models.CharField(max_length = 150)
   last_name = models.CharField(max_length = 150)
 
+  username = None
+
   is_seller = models.BooleanField(default = False, editable = False)
   is_admin = models.BooleanField(default = False, editable = False)
 
