@@ -16,5 +16,10 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', include('users.urls')),
+    path('api/', include('users.urls')),
+    path('api/', include('products.urls')),
+    path('api/', include('fees.urls')),
+    path('api/', include('payables.urls')),
+    path('api/', include('payment_info.urls')),
+    path('api/', include('transactions.urls')),
 ]
