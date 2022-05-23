@@ -11,4 +11,4 @@ class PaymentInfo(models.Model):
   
   is_active = models.BooleanField(default = True)
 
-  seller = models.ForeignKey('users.Users', on_delete = models.CASCADE)
+  customer = models.ForeignKey('users.Users', on_delete = models.CASCADE)
