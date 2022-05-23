@@ -39,6 +39,10 @@ THIRD_PARTY_APP = [
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS + THIRD_PARTY_APP
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'pagar_me.utils.permission_denied_handler'
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
